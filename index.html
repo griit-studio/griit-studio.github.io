@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+       
+      </style>
+    <title>Griit Studio</title>
+    <script type="text/javascript">
+        window.onload=function() {
+            var canvas=document.getElementById('drawingPad');
+            var ctx=canvas.getContext('2d');            
+                     //canvas.addEventListener('mousemove',function onMouseover(e) {
+                        var mx = e.clientX - 125;
+                        var my = e.clientY -125;                            
+                        ctx.fillStyle = '#000'; 
+                        
+                        ctx.font = 'bold 50px verdana';
+                        //ctx.fillText("🖍", mx, my,1000);                     
+                    //}, 0);                  
+        };
+        </script>
 
+        <script>
+                function highlight(id){
+                    
+                    elm = document.getElementById(id);
+                    elm.style.color = "red";
+                    
+                    
+                }
+
+
+        </script>
+
+
+</head>
+<body>
+    <img id = "house" src = "kiddrawing1.gif">
+    <div id = "text-cont">
+    <h1> griit studio</h1>
+    <h3> about</h3>
+    <h3> selected projects</h3>
+    <a id = "webdesign"> web design + </a>
+    <a> print </a>
+    <a id = "graphicdesign">  + graphic design</a>
+
+    <p onmouseover='highlight("webdesign")' > platypus publication </p>
+    <p> staindil wines</p>
+    <p> josh tate</p>
+
+</div>
+
+    <div id = drawing-Cont>
+    <canvas id="drawingPad">
+    </div>
+</body>
+</html>
