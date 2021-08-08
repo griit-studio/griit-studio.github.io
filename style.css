@@ -74,8 +74,9 @@ p{
     text-align: justify;
     display: none;
     width: 350px;
-    max-width: 60vw;
+    max-width: 75vw;
     position: absolute;
+    margin-bottom: 20px;
     
 }
 
