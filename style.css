@@ -72,8 +72,9 @@ p{
     z-index: 5;
     text-align: justify;
     display: none;
-    max-width: 40vw;
-    min-width: 350px;
+    width: 350px;
+    max-width: 80vw;
+    
     position: absolute;
     
 }
