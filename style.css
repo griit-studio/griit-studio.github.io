@@ -7,13 +7,14 @@ body{
     font-weight: 400;
     font-style: normal;
     font-size: 10px;;
-    color:floralwhite;
+    color:whitesmoke;
 }
 #text-cont{
     z-index: 10;
     position: absolute;
     top: 30px;
     left: 30px;
+    
     
     }
 
@@ -36,7 +37,7 @@ body{
 h1{
     top: 1px;
     display: block;
-    font-size:25px;
+    font-size:30px;
     
 
 }
