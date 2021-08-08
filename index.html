@@ -39,11 +39,38 @@
 
 </head>
 <body>
-    <img id = "house" src = "griitwebgif_v2.gif">
+    
+    
     <div id = "text-cont">
     <h1> griit studio</h1>
-    <h3> about</h3>
-    <h3> selected projects</h3>
+    <h3 onclick="toggleElm('about-text')"> about</h3>
+
+    <p id = "about-text"> Hello, this is Griit. We are the amalgamation of a photography and an architecture
+        student who love experimenting with different ways of gifting weight and mass to
+        digital spaces.
+        Dancing between printed and digital matter, our practice-based research
+        methodologies are born out of a deep love and reverence for obsolescent
+        technologies and frivolous formats, coupled with an innate connection to digital
+        spaces. We work closely with our clients to sensitively cultivate and celebrate the
+        idiosyncrasies that make up their unique grit, so that their grittiness may permeate
+        through whatever it is they wish to gift to the world. We have a comprehensive set of
+        skills to match our sweeping, far-reaching interests; from fine art, design and
+        drafting, to branding, copywriting and web development. Ultimately however, Griit
+        can be summed up as a digital creative agency run by two creative problem solvers
+        committed to the exploration and construction of new ideas, physical objects and
+        digital spaces of enduring warmth.
+        Our <br> <br> Our names are Maud Freeman and Thandi Lane and if you would like to collaborate with us then please do get in touch.
+        We can be contacted via email at ↙ <br> <br> <a href="mailto:griit.studio@gmail.com">griit.studio@gmail.com </a> </p> 
+
+    <div id= "flex-cont"> 
+    
+    
+    
+        <div id = "house-cont">
+        <img id = "house" src = "griitwebgif_v3.gif">
+        </div>
+    </div>
+    <!-- <h3> selected projects</h3>
     <a id = "webdesign"> web design + </a>
     <a> print </a>
     <a id = "graphicdesign">  + graphic design</a>
@@ -51,11 +78,28 @@
     <p onmouseover='highlight("webdesign")' > platypus publication </p>
     <p> staindil wines</p>
     <p> josh tate</p>
-
+    -->
 </div>
 
     <div id = drawing-Cont>
     <canvas id="drawingPad">
     </div>
 </body>
+
+<script>
+    function toggleElm(elmId) {
+        
+        elm = document.getElementById(elmId);
+        
+        if (elm.style.display == "block"){
+        elm.style.display = "none";}
+        else {
+            elm.style.display = "block";}
+    }
+
+
+
+</script>
+
+
 </html>
