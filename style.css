@@ -9,23 +9,27 @@ body{
     font-size: 10px;;
     color:floralwhite;
 }
-    #text-cont{
-        z-index: 10;
-        position: absolute;
-        top: 0px;
-        
+#text-cont{
+    z-index: 10;
+    position: absolute;
+    top: 50px;
+    
+    }
 
-
+#house-cont{
+    background: darkgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 #house{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    top: 50px;
     mix-blend-mode: multiply;
-    width: 50%;
-    height: 50%;
+    
+    width: 60vw;
+    
 }
 
 h1{
@@ -37,6 +41,7 @@ h1{
 }
 h3{
     margin-bottom: 0px;
+    cursor: pointer;
 }
 a{
     margin-left: 10px;
@@ -63,3 +68,26 @@ p{
     
     
 }
+
+#about-text{
+    z-index: 5;
+    text-align: justify;
+    display: none;
+    max-width: 40vw;
+    min-width: 350px;
+    position: absolute;
+    
+}
+
+#flex-cont{
+    width: 100vw;
+    background: darkgreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+}
+
