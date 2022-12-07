@@ -1,1 +1,1233 @@
+<!doctype html>
+<html ontouchstart>
+<head>
+<link rel="icon" type="image/png" href="https://i.imgur.com/Mzy1dDK.png"/>
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2X9YP6ND33"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-2X9YP6ND33');
+</script>
+<meta charset="UTF-8">
+<title>PLATYPUS PUBLICATION</title>
+
+<style>
+	
+	#loadingScreen{
+			min-height:100%;
+			min-width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			position: fixed;
+			left: 0px;
+			top:0px;
+			background: blue;
+			color: floralwhite;
+			z-index: 100;
+			transition-duration: 3s;
+			
+			
+		}
+	#loadingImg{
+			min-height:100%;
+			min-width: 100%;
+			position: fixed;
+			z-index: 1;
+			mix-blend-mode:screen;
+			transition-duration: 5s;
+			overflow: hidden;
+		}
+	#loading{
+			color:floralwhite;
+			font-size:30px;
+			
+		}
+	#logoload{
+		    max-width:25%;
+		}
+	#feels{
+		font-size: 12px;
+		
+	
+	}
+	
+	#platys{
+		z-index: -1;
+		width:  100vw;
+		height: 100vh;
+		background: blue;
+		position: absolute;
+		display: block;
+		
+	}
+	
+	#dt-001:hover{
+		cursor: pointer;
+	}
+	#dt-002:hover{
+		cursor: pointer;
+	}
+	#birdwatchers:hover{
+		cursor: pointer;
+	}
+	#bin-woman:hover{
+		cursor: pointer;
+	}
+	#logo{
+		cursor: pointer;
+	}
+	#about-block:hover{cursor: pointer;}
+	#mapping-card:hover{cursor: pointer;}
+	
+@media (orientation: portrait) {
+html, body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    align-content: center;
+    text-align: center;
+    z-index: -10;
+    overflow: hidden;
+}
+#logo-cont {
+ z-index: 5;
+    overflow: hidden;
+    display: block;
+	position: relative;
+	margin: auto;
+	
+	
+	}
+  
+#logo {
+	width: 10vw;
+	animation: shake 6s;
+	animation-iteration-count: infinite;
+    
+}
+	
+		.logo{
+	display: block;
+	position: absolute;
+	animation: shake 5s;
+	animation-iteration-count: infinite;
+	width:7.5vw;
+	z-index: 10;
+
+	}
+	
+.flex {
+    display: flex;
+    justify-content: center;
+}
+#buy-mee {
+    display: block;
+    position: absolute;
+    top: 35vh;
+    left: 35vw;
+    width: 150px;
+    cursor: pointer;
+    animation: buyme 5s;
+    animation-iteration-count: infinite;
+    transition-duration: 5s;
+}
+#buy-mee:hover {
+    width: 25vw;
+}
+@keyframes buyme {
+0% {
+transform: translate(1px, 1px) rotate(0deg);
+}
+10% {
+transform: translate(-1px, -2px) rotate(-1deg);
+}
+20% {
+transform: translate(-3px, 0px) rotate(1deg);
+}
+30% {
+transform: translate(3px, 2px) rotate(0deg);
+left:20vw;
+}
+40% {
+transform: translate(1px, -1px) rotate(1deg);
+}
+50% {
+transform: translate(-1px, 2px) rotate(-1deg);
+}
+60% {
+transform: translate(-3px, 1px) rotate(0deg);
+}
+70% {
+transform: translate(3px, 1px) rotate(-1deg);
+left: 40vw;
+}
+80% {
+transform: translate(-1px, -1px) rotate(1deg);
+}
+90% {
+transform: translate(1px, 2px) rotate(0deg);
+}
+100% {
+transform: translate(1px, -2px) rotate(-1deg);
+}
+}
+#acknowledgment {
+    display: block;
+    
+    margin: auto;
+    
+    top: 0px;
+    width: 75vw;
+    text-align: center;
+    
+    z-index: 10;
+    color: floralwhite;
+    font-size: 20px;
+text-align:
+}
+#about-card {
+    margin: 2px;
+    background: blue;
+    border: dotted;
+    border-color: red;
+    height: 40vh;
+    width: 70px;
+    position: absolute;
+    right: -4px;
+    bottom: 20vh;
+    z-index: 1;
+    color: none;
+    overflow: hidden;
+    font-size: 20px;
+transition: width 2s ease, height 2s ease, top 2s ease, left 2s ease, border-radius 2s ease, z-index 2s 5s ease, background 5s 5s ease, color 5s 5s ease, min-width: 550px;
+5s;
+    transition: all 5s;
+}
+#about-card:hover {
+    border: dotted;
+    border-color: red;
+    width: 98vw;
+    border-right: none;
+    z-index: 2;
+    color: floralwhite;
+    overflow-y: scroll;
+	box-shadow: 15px 10px 50px 5px black;
+}
+#about-block {
+    border-right: dotted;
+    border-color: red;
+    height: 100vh;
+    width: 70px;
+    background: blue;
+    float: left;
+    display: block;
+    color: floralwhite;
+    z-index: 5;
+    font-size: 30px;
+}
+#about-text {
+    background: blue;
+    width: 50%;
+    font-size: 20px;
+    display: block;
+    overflow-y: scroll;
+    position: absolute;
+    color: floralwhite;
+    z-index: -1;
+    text-align: justify;
+    text-align-last: left;
+}
+#contact {
+    width: 50%;
+    color: floralwhite;
+    display: inline-flex;
+    text-align: justify;
+    text-align-last: left;
+}
+#mapping-card {
+    position: absolute;
+    border-width: 10px;
+    border: dotted;
+    border-color: red;
+    width: 70px;
+    height: 40vh;
+    left: -3px;
+    bottom: 20vh;
+    overflow: hidden;
+    transition: all 5s;
+    z-index: 2;
+}
+#mapping-card:hover {
+    width: 98vw;
+    z-index: 11;
+    justify-content: center;
+	box-shadow: 15px 10px 50px 5px black;
+}
+#mapping-block {
+    width: 75px;
+    border-right: dotted;
+    border-left: dotted;
+    border-color: red;
+    height: 100%;
+    position: absolute;
+    background: blue;
+    float: left;
+    display: block;
+    color: floralwhite;
+    z-index: 2;
+    font-size: 30px;
+}
+#quandamooka {
+    width: 70%;
+    position: relative;
+}
+#map-container {
+    height: 40vh;
+    width: 98vw;
+    padding-left: 70px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: floralwhite;
+    cursor: crosshair;
+}
+.img-magnifier-container {
+    position: relative;
+    display: block;
+    z-index: 6;
+}
+.img-magnifier-glass {
+    position: absolute;
+    border: 3px dashed red;
+    border-radius: 50%;
+    /*Set the size of the magnifier glass:*/
+    width: 200px;
+    height: 200px;
+    z-index: 10;
+}
+.watchers {
+    position: absolute;
+    display: none;
+    bottom: 0px;
+    right: 3vw;
+    overflow: hidden;
+	
+}
+#birdwatchers {
+    width: 30vw;
+    animation: shake 25s;
+    animation-iteration-count: infinite;
+}
+#watcher-bubble {
+    display: none;
+    left: -10px;
+    color: blue;
+    border-radius: 15px;
+    background: white;
+    box-shadow: -4px 5px 5px black;
+    padding: 2px;
+    max-width: 180px;
+    animation: shake 13s;
+    animation-iteration-count: infinite;
+    overflow: visible;
+    z-index: 10;
+}
+.dt-001 {
+    position: absolute;
+    display: inline;
+    bottom: 0px;
+    overflow: visible;
+    left: 30%;
+}
+#dt-001-bubble {
+    display: none;
+    color: blue;
+    border-radius: 15px;
+    background: white;
+    box-shadow: -4px 5px 5px black;
+    padding: 2px;
+    max-width: 180px;
+    z-index: 20;
+    animation: shake 13s;
+    animation-iteration-count: infinite;
+    overflow: visible;
+}
+#dt-001 {
+    transform: scaleX(-1);
+    height: 35vh;
+    animation: shake 10s;
+    animation-iteration-count: infinite;
+    overflow: hidden;
+    z-index: 10;
+}
+.dt-002 {
+    position: absolute;
+    display: inline;
+    bottom: 0px;
+    overflow: visible;
+    left: 55%;
+    z-index: 1;
+}
+#dt-002-bubble {
+    display: none;
+    color: blue;
+    border-radius: 15px;
+    background: white;
+    box-shadow: -4px 5px 5px black;
+    padding: 2px;
+    max-width: 180px;
+    z-index: 100;
+    animation: shake 10s;
+    animation-iteration-count: infinite;
+    overflow: visible;
+}
+#dt-002 {
+    transform: scaleX(-1);
+    height: 30vh;
+    z-index: 1;
+    overflow: hidden;
+    animation: shake 15s;
+    animation-iteration-count: infinite;
+}
+.bin-woman {
+    position: absolute;
+    display: none;
+    left: 15px;
+    bottom: 30px;
+}
+#bin-woman {
+    height: 15vh;
+    animation: shake 10s;
+    animation-iteration-count: infinite;
+    transition: all 5s;
+    overflow: visible;
+}
+#bin-woman:hover {
+    height: 25vh;
+    z-index: 10;
+}
+#bin-woman-bubble {
+    color: blue;
+    margin: 10px;
+    max-height: 40px;
+    padding: 7px;
+    height: auto;
+    border-radius: 15px;
+    background: white;
+    box-shadow: -4px 5px 5px black;
+    display: none;
+    animation: shake 10s;
+    animation-iteration-count: infinite;
+    overflow: visible;
+    z-index: 10;
+}
+.scomo {
+    position: absolute;
+    display: none;
+    right: 85px;
+    top: 50vh;
+}
+#scomo {
+    transform: rotate(-7.421deg);
+    height: 10vh;
+    max-height: 120px;
+    animation: shake 30s;
+    animation-iteration-count: infinite;
+}
+#scomo-bubble {
+    max-height: 50px;
+    color: blue;
+    border-radius: 15px;
+    background: white;
+    box-shadow: -4px 5px 5px black;
+    margin-top: -15px;
+    padding: 5px;
+    display: none;
+}
+}
+
+@media (orientation: landscape) {
+html, body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    align-content: center;
+    text-align: center;
+    
+	z-index: -10;
+    overflow: hidden;
+}
+.logo-cont {
+	
+    position: absolute;
+    display: block;
+	
+	z-index: 10;
+	
+  
+}
+	
+	.logo{
+	display: block;
+	position: absolute;
+	animation: shake 5s;
+	animation-iteration-count: infinite;
+	width: 5vw;
+	z-index: 10;
+
+	}
+	
+#logo {
+	z-index: 5;
+    width: 5vw;
+	animation: shake 6s;
+	animation-iteration-count: infinite;
+	transition: 0.5s;
+    
+}
+	#logo:hover{
+		width: 7.5vw;
+	}
+.flex {
+    display: flex;
+    justify-content: center;
+}
+#buy-mee {
+    display: block;
+    position: absolute;
+    top: 35vh;
+    left: 35vw;
+    width: 200px;
+    cursor: pointer;
+    animation: buyme 5s;
+    animation-iteration-count: infinite;
+    transition-duration: 5s;
+}
+#buy-mee:hover {
+    width: 25vw;
+}
+@keyframes buyme {
+0% {
+transform: translate(1px, 1px) rotate(0deg);
+}
+10% {
+transform: translate(-1px, -2px) rotate(-1deg);
+}
+20% {
+transform: translate(-3px, 0px) rotate(1deg);
+}
+30% {
+transform: translate(3px, 2px) rotate(0deg);
+left:40vw;
+}
+40% {
+transform: translate(1px, -1px) rotate(1deg);
+}
+50% {
+transform: translate(-1px, 2px) rotate(-1deg);
+}
+60% {
+transform: translate(-3px, 1px) rotate(0deg);
+}
+70% {
+transform: translate(3px, 1px) rotate(-1deg);
+left: 50vw;
+}
+80% {
+transform: translate(-1px, -1px) rotate(1deg);
+}
+90% {
+transform: translate(1px, 2px) rotate(0deg);
+}
+100% {
+transform: translate(1px, -2px) rotate(-1deg);
+}
+}
+#acknowledgment {
+    
+	top: 0px;
+   	display: block;
+	margin: auto;
+	text-align: center;
+	width: 75vw;
+    z-index: 10;
+    color: floralwhite;
+    font-size: 12px;
+}
+.title {
+    color: blue
+}
+#about-card {
+    margin: 2px;
+    background: blue;
+    border: dotted;
+    border-color: red;
+    height: 230px;
+    border-right: none;
+    width: 70px;
+    position: absolute;
+    right: -4px;
+    bottom: 30vh;
+    z-index: 1;
+    color: none;
+    overflow: hidden;
+    font-size: 12px;
+transition: width 2s ease, height 2s ease, top 2s ease, left 2s ease, border-radius 2s ease, z-index 2s 5s ease, background 5s 5s ease, color 5s 5s ease, min-width: 550px;
+5s;
+    transition: all 5s;
+}
+#about-card:hover {
+    border-radius: 0px;
+    border: dotted;
+    border-color: red;
+    width: 550px;
+    height: 65vh;
+    bottom: 5vh;
+    border-right: none;
+    z-index: 2;
+    color: floralwhite;
+	box-shadow: -15px 10px 50px 5px black;
+}
+#about-block {
+    border-right: dotted;
+    border-color: red;
+    height: 165vh;
+    width: 70px;
+    background: blue;
+    float: left;
+    display: block;
+    color: floralwhite;
+    z-index: 5;
+    font-size: 12px;
+}
+#about-text {
+    background: blue;
+    width: 400px;
+    position: absolute;
+    color: floralwhite;
+    display: inline-flex;
+    z-index: -1;
+    text-align: justify;
+    text-align-last: left;
+}
+#contact {
+    width: 50%;
+    color: floralwhite;
+    display: inline-flex;
+    text-align: justify;
+    text-align-last: left;
+}
+#mapping-card {
+    position: absolute;
+    border-width: 10px;
+    border: dotted;
+    border-color: red;
+    width: 70px;
+    height: 230px;
+    left: -3px;
+    bottom: 30vh;
+    overflow: hidden;
+    transition: all 5s;
+    z-index: 2;
+}
+#mapping-card:hover {
+    height: 85vh;
+    width: 90vw;
+    bottom: 5vh;
+    justify-content: center;
+	box-shadow: 15px 10px 50px 5px black;
+}
+#mapping-block {
+    width: 75px;
+    border-right: dotted;
+    border-color: red;
+    height: 100%;
+    position: absolute;
+    background: blue;
+    float: left;
+    display: block;
+    color: floralwhite;
+    z-index: 10;
+    font-size: 12px;
+}
+#quandamooka {
+	
+	
+    display: block;
+	width: 80%;
+	margin: auto;
+	
+    
+    
+    background: floralwhite;
+}
+#map-container {
+    width: 90vw;
+	height: 85vh;
+    display: flex;
+	justify-content: center;
+	
+    overflow-y: scroll;
+    background: floralwhite;
+    cursor: crosshair;
+}
+.img-magnifier-container {
+    position: relative;
+    display: block;
+    z-index: 6;
+}
+.img-magnifier-glass {
+    position: absolute;
+    border: 3px dashed red;
+    border-radius: 50%;
+    /*Set the size of the magnifier glass:*/
+    width: 150px;
+    height: 150px;
+    z-index: 10;
+}
+.watchers {
+    position: absolute;
+    display: block;
+    bottom: 0px;
+    right: 10vw;
+    overflow: hidden;
+}
+#birdwatchers {
+    width: 30vw;
+    animation: shake 25s;
+    animation-iteration-count: infinite;
+	transition: 0.5s;
+}
+	#birdwatchers:hover{
+		width: 35vw;
+	}
+.watchers:hover {
+    z-index: 100;
+}
+#watcher-bubble {
+    display: none;
+    left: -10px;
+    color: blue;
+    border-radius: 15px;
+    background: white;
+    box-shadow: -4px 5px 5px black;
+    padding: 2px;
+    max-width: 180px;
+    animation: shake 13s;
+    animation-iteration-count: infinite;
+    overflow: visible;
+    z-index: 10;
+}
+.dt-001 {
+    position: absolute;
+    display: inline;
+    bottom: 0px;
+    overflow: visible;
+    left: 10%;
+	animation: shake 21s;
+	animation-iteration-count: infinite;
+    overflow: hidden;
+}
+#dt-001-bubble {
+    display: none;
+    color: blue;
+    border-radius: 15px;
+    background: white;
+    box-shadow: -4px 5px 5px black;
+    padding: 2px;
+    max-width: 180px;
+    animation: shake 5s;
+    animation-iteration-count: infinite;
+    overflow: visible;
+}
+#dt-001 {
+
+    height: 35vh;
+	transform: scaleX(-1);
+	transition: 0.5s;
+    
+}
+	#dt-001:hover{
+		
+	height: 40vh;
+		
+	}
+.dt-002 {
+    position: absolute;
+    display: inline;
+    bottom: 0px;
+    overflow: visible;
+    left: 20%;
+	animation: shake 15s;
+    animation-iteration-count: infinite;
+}
+#dt-002-bubble {
+    display: none;
+    color: blue;
+    border-radius: 15px;
+    background: white;
+    box-shadow: -4px 5px 5px black;
+    padding: 2px;
+    max-width: 180px;
+    animation: shake 13s;
+    animation-iteration-count: infinite;
+    overflow: visible;
+}
+#dt-002 {
+    
+    height: 30vh;
+    z-index: 1;
+	transition: 0.5s;
+    overflow: hidden;
+	transform: scaleX(-1);
+    
+}
+	#dt-002:hover{
+		height: 35vh;
+	}
+.bin-woman {
+    position: absolute;
+    display: flex;
+    left: 42vw;
+    bottom: 30px;
+}
+#bin-woman {
+    height: 15vh;
+    animation: shake 10s;
+    animation-iteration-count: infinite;
+    transition: all 5s;
+    overflow: visible;
+}
+#bin-woman:hover {
+    height: 25vh;
+    z-index: 10;
+}
+#bin-woman-bubble {
+    color: blue;
+    margin: 10px;
+    max-height: 25px;
+    padding: 7px;
+    height: auto;
+    border-radius: 15px;
+    background: white;
+    box-shadow: -4px 5px 5px black;
+    display: none;
+    animation: shake 10s;
+    animation-iteration-count: infinite;
+    overflow: visible;
+}
+.scomo {
+    position: absolute;
+    display: flex;
+    right: 85px;
+    top: 50vh;
+}
+#scomo {
+    transform: rotate(-7.421deg);
+    height: 10vh;
+    max-height: 120px;
+    animation: shake 30s;
+    animation-iteration-count: infinite;
+}
+#scomo-bubble {
+    max-height: 50px;
+    color: blue;
+    border-radius: 15px;
+    background: white;
+    box-shadow: -4px 5px 5px black;
+    margin-top: -15px;
+    padding: 5px;
+    display: none;
+}
+}
+
+@media only screen and (max-height: 350px) {
+html, body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    align-content: center;
+    text-align: center;
+    background: blue;
+    overflow: hidden;
+}
+#acknowledgment {
+	z-index: 1000;
+    font-size: 10px;
+    width: 45vw;
+    margin-left: 25vw;
+}
+#about-card {
+    top: 75px;
+}
+#about-card:hover {
+    width: 80vw;
+    overflow-y: scroll;
+}
+#mapping-card {
+    top: 75px;
+}
+#buy-mee {
+    width: 125px;
+}
+}
+	
+@keyframes shake {
+0% {
+transform: translate(1px, 1px) rotate(0deg);
+}
+10% {
+transform: translate(-1px, -2px) rotate(-1deg);
+}
+20% {
+transform: translate(-3px, 0px) rotate(1deg);
+}
+30% {
+transform: translate(3px, 2px) rotate(0deg);
+}
+40% {
+transform: translate(1px, -1px) rotate(1deg);
+}
+50% {
+transform: translate(-1px, 2px) rotate(-1deg);
+}
+60% {
+transform: translate(-3px, 1px) rotate(0deg);
+}
+70% {
+transform: translate(3px, 1px) rotate(-1deg);
+}
+80% {
+transform: translate(-1px, -1px) rotate(1deg);
+}
+90% {
+transform: translate(1px, 2px) rotate(0deg);
+}
+100% {
+transform: translate(1px, -2px) rotate(-1deg);
+}
+}
+@keyframes logo {
+0% {
+left:5vw;
+opacity: 0;
+}
+10% {
+opacity: 0.60;
+}
+50% {
+opacity: 1;
+}
+
+90% {
+opacity: 0.60;
+}
+100% {
+left:90vw;
+	opacity: 0;}}
+
+::-webkit-scrollbar {
+		
+		 width: 5px;
+		
+		
+	}
+::-webkit-scrollbar-track-piece{
+		background: floralwhite;
+	}
+::-webkit-scrollbar-thumb{
+		border: dashed;
+		
+		border-color: floralwhite;
+	}
+	
+	
+</style>
+<script>
+function magnify(imgID, zoom) {
+console.log("magnify called");
+  var img, glass, w, h, bw;
+  img = document.getElementById(imgID);
+
+  /* Create magnifier glass: */
+  glass = document.createElement("DIV");
+  glass.setAttribute("class", "img-magnifier-glass");
+
+  /* Insert magnifier glass: */
+  img.parentElement.insertBefore(glass, img);
+
+  /* Set background properties for the magnifier glass: */
+  glass.style.backgroundImage = "url('" + img.src + "')";
+  glass.style.backgroundRepeat = "no-repeat";
+  glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+  bw = 3;
+  w = glass.offsetWidth / 2;
+  h = glass.offsetHeight / 2;
+
+  /* Execute a function when someone moves the magnifier glass over the image: */
+  glass.addEventListener("mousemove", moveMagnifier);
+  img.addEventListener("mousemove", moveMagnifier);
+
+  /*and also for touch screens:*/
+  glass.addEventListener("touchmove", moveMagnifier);
+  img.addEventListener("touchmove", moveMagnifier);
+  function moveMagnifier(e) {
+    var pos, x, y;
+    /* Prevent any other actions that may occur when moving over the image */
+    e.preventDefault();
+    /* Get the cursor's x and y positions: */
+    pos = getCursorPos(e);
+    x = pos.x;
+    y = pos.y;
+    /* Prevent the magnifier glass from being positioned outside the image: */
+    if (x > img.width - (w / zoom)) {x = img.width - (w / zoom);}
+    if (x < w / zoom) {x = w / zoom;}
+    if (y > img.height - (h / zoom)) {y = img.height - (h / zoom);}
+    if (y < h / zoom) {y = h / zoom;}
+    /* Set the position of the magnifier glass: */
+    glass.style.left = (x - w) + "px";
+    glass.style.top = (y - h) + "px";
+    /* Display what the magnifier glass "sees": */
+    glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
+  }
+
+  function getCursorPos(e) {
+    var a, x = 0, y = 0;
+    e = e || window.event;
+    /* Get the x and y positions of the image: */
+    a = img.getBoundingClientRect();
+    /* Calculate the cursor's x and y coordinates, relative to the image: */
+    x = e.pageX - a.left;
+    y = e.pageY - a.top;
+    /* Consider any page scrolling: */
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
+    return {x : x, y : y};
+  }
+}
+</script> 
+<script> 
+function speechToggle(id){
+	var element = document.getElementById(id);
+	
+	if (element.style.display == "block"){
+		element.style.display = "none";
+	}
+	else{
+		element.style.display = "block";}
+	
+	
+}	
+	
+</script>
+</head>
+
+<body>
+	
+	<div id = "loadingScreen">
+	<img id = "loadingImg" src= "https://media.giphy.com/media/FNpAjwtN1p1Yc/source.gif">
+	
+	<img id = "logoload" src = "https://i.imgur.com/mNBqdK5.png">
+		
+	
+	<h1 id = "loading">loading...</h1>
+	<p id = "feels"> At PLATYPUS we believe nothing is ever done until it feels just right. </p>
+	
+	</div>
+	
+	
+	
+	<div id = "platys">
+	
+	
+	
+	
+	
+	</div>
+	
+	
+<div id = "acknowledgment">
+  <p>
+	  
+	PLATYPUS acknowledges the JAGERA and TURRBAL PEOPLE, the traditional owners of the land that facilitates the creation of this publication. I pay my respects to their elders past and present, and their descendants. <br>PLATYPUS strongly believes hope resides within the land, and those who understand it the most. Please respect this and help change the system.</p>
+	
+	
+
+	
+</div>
+<div id = "logo-cont"> <img id = "logo" src="https://i.imgur.com/3e13xlb.png" /></div>	
+<div id = "buymee-cont"> <img onclick = "window.location='https://platypuspublication.com/im-buying-platypus!'"  id = "buy-mee" src="https://i.imgur.com/FrjiEWB.png"/> </div>
+<div>
+  <div id = "mapping-card">
+    <div id = "mapping-block" class = "tab-blocks" >
+      <p id = "country"> C<br>
+        O<br>
+        U<br>
+        N<br>
+        T<br>
+        R<br>
+        Y <br>
+        <br>
+        /<br>
+        <br>
+        L<br>
+        A<br>
+        N<br>
+        D </p>
+    </div>
+    <div id = "map-container">
+      <div class = "img-magnifier-container"> <img id = "quandamooka" src="https://i.imgur.com/Et5xLQR.png" alt="quandamooka map"/> </div>
+    </div>
+  </div>
+  <div id = "about-card">
+    <div id = "about-block" class = "tab-blocks">
+      <div>
+        <p> A <br>
+          B <br>
+          O <br>
+          U<br>
+          T<br>
+          <br>
+          P<br>
+          L<br>
+          A<br>
+          T<br>
+          Y<br>
+          P<br>
+          U<br>
+          S</p>
+      </div>
+    </div>
+    <div class = "flex">
+      <p id = "about-text">PLATYPUS is a print publication recognising unseen Australian icons hiding at the intersection of STOLEN LAND and culture in this anthropocene. It is not afraid to express ideas through casual poetry, semi-political, visual jest and bold gestures.<br>
+        <br>
+        Australia has a lot of loud cultural icons drowning out the ugly truths of the land. PLATYPUS the publication, like the animal, is swimming somewhere between land and life- a rare breed of logical parts that make a unique and beautiful whole. It is an animal which, like any human, is tricky to categorise, but once seen for its beauty, humour and evolutionary brilliance, its complexities become much less muddled. <br>
+        <br>
+        How can we start to casually find the undervalued, iconic freaks of culture- be they beautiful, humorous and meaningful people, occupations, animals, plants or objects- in the ugly truths of Australia’s inverse and guilty landscape? <br>
+        <br>
+        <br>
+        <br>
+        CONTACT DETAILS<br>
+        -----------------------------------------------------<br>
+        <br>
+        PLATYPUS enthusiast and founder Marilena Hewitt <br>
+        e. marilenahewitt94@gmail.com<br>
+        i. @platypuspublicaion <br>
+        <br>
+        web design by griit studio <br> <br> © PLATYPUS Journal, 2021</p>
+    </div>
+  </div>
+  <div>
+    <div class = "watchers" onclick = "speechToggle('watcher-bubble')">
+      <div id = "watcher-bubble" >
+        <p> If I could just comment on that.....I’d just like to say I used to see them at the
+          airport all the time. </p>
+      </div>
+      <img  id = "birdwatchers" src="https://static.tumblr.com/tpfstdv/Uluqp9srx/birdwatchers.png"> </div>
+    <div class = "dt-002" onclick = "speechToggle('dt-002-bubble')">
+      <div id = "dt-002-bubble">
+        <p>Fast lane!!</p>
+      </div>
+      <img id = "dt-002" src="https://static.tumblr.com/tpfstdv/t2Vqp9ss0/dt_002.png"> </div>
+    <div class = "dt-001" onclick = "speechToggle('dt-001-bubble')">
+      <div id = "dt-001-bubble">
+        <p>Slow lane...</p>
+      </div>
+      <img id = "dt-001" src="https://static.tumblr.com/tpfstdv/mMIqp9srz/dt_001.png"> </div>
+    <div class = "bin-woman"> <img onclick = "speechToggle('bin-woman-bubble')" id = "bin-woman" src="https://static.tumblr.com/tpfstdv/znZqp9sro/binwoman_copy.png">
+      <p id = "bin-woman-bubble"> I think about rubbish
+        when no one else can. </p>
+    </div>
+  </div>
+</div>
+</body>
+<script>
+
+
+	
+	
+
+</script>
+	
+<script>	
+	
+	var loading = setInterval(loadingAnimation, 1000);
+	
+	function loadingAnimation(){
+		if (document.getElementById('loading').innerHTML == "loading................"){
+			
+			document.getElementById('loading').innerHTML = "loading";
+		}
+		else {
+			document.getElementById('loading').innerHTML = document.getElementById('loading').innerHTML + ".";
+			
+		}
+	}
+	
+	window.onload = function(){
+		
+		document.getElementById("loadingScreen").style.background = "none";
+		document.getElementById("loadingScreen").style.zIndex = "-100";
+		document.getElementById("loadingScreen").innerHTML = "";
+		clearInterval(loading);
+		
+	}
+	
+	var ogLogo = document.getElementById("logo");
+	
+	ogLogo.addEventListener("click", function(){
+		
+
+		
+		
+		var x = Math.floor((Math.random() * 90) + 0);
+		var y = Math.floor((Math.random() * 90) + 0);
+		
+		var newPlay = document.createElement("img");
+		
+		newPlay.src = "https://i.imgur.com/bffcVB9.png";
+		newPlay.className = "logo";
+		
+		newPlay.style.top = y+"vh";
+		newPlay.style.left = x+"vw";
+		
+		
+		
+		
+		document.getElementById("platys").appendChild(newPlay);
+		
+	})
+	
+	var mapInitialised = false;
+	document.getElementById("mapping-card").addEventListener("mouseover", function(){
+		
+		
+		if (mapInitialised == false){
+			magnify('quandamooka',2);
+			mapInitialised = true;
+		}
+		
+		
+	} );
+	
+
+		
+	
+	
+															  
+												
+	
+	
+	
+</script>
+
+</html>
