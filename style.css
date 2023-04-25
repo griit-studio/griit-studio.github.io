@@ -50,18 +50,22 @@ body{
 h1{
     width: 100%;
     text-align: center;
-    font-size: 8vw; 
+    font-size: 6vw;
+    
 }
 
 #water{font-size: 10vw;
-text-shadow: 7px 5px 3px darkred;
-margin-bottom: -65px;
+color: blue;
+text-shadow: 7px 5px 3px darkblue;
+margin-bottom: -90px;
 font-style: italic;}
 
 #thirst{
-    
+
+    color: blanchedalmond;
     width: 100%;
-    text-align: center;}
+    text-align: center;
+    font-size: 1vw;}
 
 #background-img{
     width: 100vw;
