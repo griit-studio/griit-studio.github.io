@@ -1,25 +1,58 @@
-#graphic-banner{
-    width: 100vw;
-    height: 85vh;
-    display: flex;
-    justify-content: center;
-
-}
-
-#graphic-banner img{
-    height: 100%;
-}
-
-#graphic-banner h1{
-    position:absolute;
-    max-width: 15vw;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
-    font-size: xx-large;
-
-}
-
 html{
     font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    color: floralwhite;
+    
+}
+body{
+    margin: 0;
+    padding: 0;
+   
+    background-image: url('callout-content/back.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    
+}
+
+
+#graphic-banner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+h1{
+    width: 100%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    font-size: xx-large; 
+}
+
+#background-img{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -10;
+    
+}
+#background-img img{
+    min-width: 100%;
+    min-height: 100%;
+    height:auto;
+    width: min-content;
+    position: absolute;
+}
+
+.info{
+    width: 80vw;
+    margin-left: 5vw;
+    font-weight: bold;
 }
