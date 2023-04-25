@@ -102,3 +102,13 @@ h1{
     
 }
 
+@media screen and (max-width: 768px) {
+    .info{
+        width: 85vw;
+        font-size: small;}
+    h1{ 
+        font-size: x-large;
+        margin-bottom: 30px;
+    }
+
+}
