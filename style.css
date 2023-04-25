@@ -1,0 +1,25 @@
+#graphic-banner{
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+
+}
+
+#graphic-banner img{
+    height: 100%;
+}
+
+#graphic-banner h1{
+    position:absolute;
+    max-width: 15vw;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: xx-large;
+
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
