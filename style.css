@@ -1,5 +1,12 @@
-html{
+@font-face {
+    font-family: 'TeX Gyre Heros';
+    src: url('web fonts/texgyreheroscn_regular_macroman/texgyreheroscn-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
     
+  }
+html{
+    font-family: 'TeX Gyre Heros', sans-serif;
     width: 100vw;
     left: 0px;
     overflow-x: hidden;
@@ -8,16 +15,11 @@ html{
     
 }
 
-@font-face {
-    font-family: 'TeX Gyre Heros';
-    src: url('web fonts\texgyreheroscn_regular_macroman\texgyreheroscn-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
+
 body{
     margin: 0;
     padding: 0;
-    font-family: 'TeX Gyre Heros', sans-serif;
+    
     background-image: url('callout-content/back.png');
     
     background-position: center;
@@ -48,10 +50,18 @@ body{
 h1{
     width: 100%;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    
-    font-size: xx-large; 
+    font-size: 8vw; 
 }
+
+#water{font-size: 10vw;
+text-shadow: 7px 5px 3px darkred;
+margin-bottom: -65px;
+font-style: italic;}
+
+#thirst{
+    
+    width: 100%;
+    text-align: center;}
 
 #background-img{
     width: 100vw;
@@ -72,7 +82,6 @@ h1{
     width: 50vw;
     margin-left: auto;
     margin-right: auto;
-    font-weight: bold;
     text-align: justify;
 }
 
@@ -117,8 +126,12 @@ h1{
         width: 85vw;
         font-size: small;}
     h1{ 
-        font-size: x-large;
+        font-size: 15vw;
         margin-bottom: 30px;
     }
+    #water{
+        font-size: 25vw;
+    }
+    
 
 }
