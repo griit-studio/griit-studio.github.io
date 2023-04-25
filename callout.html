@@ -6,16 +6,23 @@
   <title>Platypus Callout</title>
   <link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/interactjs@1.10.11/dist/interact.min.js"></script>
+
 </head>
 <body>
    
-  
-   
-   
-   
-    
-  
-      <img id = 'graphic-banner' src = "callout-content\water.gif">
+  <div id="container">
+    <h1> WATER
+    </h1>
+    <img id="draggable-image" class="draggable-image" src="callout-content\water.gif" alt="Draggable image" />
+    <img id="draggable-image" class="draggable-image" src="callout-content\crayon_001.png" alt="Draggable image" />
+    <img id="draggable-image" class="draggable-image" src="callout-content\crayon_002.png" alt="Draggable image" />
+    <img id="draggable-image" class="draggable-image" src="callout-content\download.jpg" alt="Draggable image" />
+    <img id="draggable-image" class="draggable-image" src="callout-content\windsurf-surf.gif" alt="Draggable image" />
+    <img id="draggable-image" class="draggable-image" src="callout-content\god.gif" alt="Draggable image" />
+    <img id="draggable-image" class="draggable-image" src="callout-content\pool.gif" alt="Draggable image" />
+    <img id="draggable-image" class="draggable-image" src="callout-content\pool_002.gif" alt="Draggable image" />
+  </div>
 
    
     <h1> PLATYPUS ESSENTIALS CALLOUT <br> Water <br>  [thirst]</h1> 
@@ -39,4 +46,146 @@
     </div>
 
 </body>
+
+<script>
+
+  const container = document.getElementById('container');
+  const images = document.getElementsByClassName('draggable-image');
+
+  window.onload = () => {
+    for (let i = 0; i < images.length; i++) {
+      const image = images[i];
+      resizeImageRandomly(image);
+      initializeDraggableImage(image);
+      makeResizable(image);
+    }
+  };
+
+  function resizeImageRandomly(image) {
+  let newSize;
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth <= 768) { // Mobile devices
+    newSize = getRandomValue(15, 50); // Adjust these values for mobile devices as needed
+  } else { // Non-mobile devices
+    newSize = getRandomValue(3, 25);
+  }
+  
+  image.style.width = newSize + 'vw';
+}
+
+  function initializeDraggableImage(image) {
+    // Set initial random position
+    const containerWidth = container.clientWidth;
+    const containerHeight = container.clientHeight;
+    const imageWidth = image.clientWidth;
+    const imageHeight = image.clientHeight;
+    const xPosition = getRandomPosition(0, containerWidth - imageWidth);
+    const yPosition = getRandomPosition(0, containerHeight - imageHeight);
+
+    image.style.left = xPosition + 'px';
+    image.style.top = yPosition + 'px';
+
+    // Add event listeners for dragging
+    let active = false;
+    let xOffset = 0;
+    let yOffset = 0;
+
+    image.addEventListener('mousedown', dragStart, false);
+    image.addEventListener('touchstart', dragStart, false);
+
+    document.addEventListener('mousemove', drag, false);
+    document.addEventListener('touchmove', drag, false);
+
+    document.addEventListener('mouseup', dragEnd, false);
+    document.addEventListener('touchend', dragEnd, false);
+
+    function dragStart(event) {
+      active = true;
+      image.style.transform = 'scale(1.1)';
+
+      if (event.type === 'touchstart') {
+        xOffset = event.touches[0].clientX - parseInt(image.style.left);
+        yOffset = event.touches[0].clientY - parseInt(image.style.top);
+      } else {
+        xOffset = event.clientX - parseInt(image.style.left);
+        yOffset = event.clientY - parseInt(image.style.top);
+      }
+    }
+
+    function drag(event) {
+      if (active) {
+        event.preventDefault();
+        let clientX, clientY;
+
+        if (event.type === 'touchmove') {
+          clientX = event.touches[0].clientX;
+          clientY = event.touches[0].clientY;
+        } else {
+          clientX = event.clientX;
+          clientY = event.clientY;
+        }
+
+        let xPosition = clientX - xOffset;
+        let yPosition = clientY - yOffset;
+
+        if (xPosition < 0) {
+          xPosition = 0;
+        } else if (xPosition > containerWidth - imageWidth) {
+          xPosition = containerWidth - imageWidth;
+        }
+
+        if (yPosition < 0) {
+          yPosition = 0;
+        } else if (yPosition > containerHeight - imageHeight) {
+          yPosition = containerHeight - imageHeight;
+        }
+
+        image.style.left = xPosition + 'px';
+        image.style.top = yPosition + 'px';
+      }
+    }
+
+    function dragEnd() {
+      active = false;
+      image.style.transform = 'scale(1)';
+    }
+  } 
+  function makeResizable(image) {
+  interact(image).resizable({
+    edges: { left: true, right: true, bottom: true, top: true },
+    modifiers: [
+      interact.modifiers.restrictEdges({
+        outer: container,
+      }),
+      interact.modifiers.restrictSize({
+        min: { width: 10, height: 10 },
+      }),
+    ],
+    inertia: true,
+  })
+  .on('resizemove', function (event) {
+    let { x, y } = event.target.dataset;
+
+    Object.assign(event.target.style, {
+      width: `${event.rect.width}px`,
+      height: `${event.rect.height}px`,
+      transform: `translate(${event.deltaRect.left}px, ${event.deltaRect.top}px)`,
+    });
+
+    Object.assign(event.target.dataset, { x, y });
+  });
+}
+
+ 
+
+  function getRandomPosition(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
+  function getRandomValue(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+</script>
+
 </html>
