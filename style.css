@@ -6,7 +6,8 @@
     
   }
 html{
-    font-family: 'TeX Gyre Heros', sans-serif;
+    /*font-family: 'TeX Gyre Heros', sans-serif;*/
+    font-family: 'Times New Roman', Times, serif;
     width: 100vw;
     left: 0px;
     overflow-x: hidden;
@@ -129,6 +130,7 @@ font-style: italic;}
     font-size: 7vw;
     z-index: 1;
     font-style: italic;
+    user-select: none;
 }
 
 #apply-cont{
@@ -146,12 +148,13 @@ font-style: italic;}
         width: 85vw;
         font-size: small;}
     h1{ 
-        font-size: 15vw;
-        margin-bottom: 30px;
+        font-size: 8vw;
+        
     }
     #water{
+
         font-size: 25vw;
-        margin-bottom: -30px;
+        margin-bottom: -40px;
     }
 
     #info{
@@ -161,6 +164,12 @@ font-style: italic;}
     #info img{
         max-width: 30vw;
     } 
+
+    #thirst{
+        font-size: large;
+    }
+
+
     
 
 }
