@@ -20,6 +20,7 @@
    #BCC img{
     mix-blend-mode: multiply;
     width: 250px;
+    margin-bottom: 50px;
    }
 html{
     /*font-family: 'TeX Gyre Heros', sans-serif;*/
