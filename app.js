@@ -13,11 +13,7 @@ function updateImage(path, first, last, interval) {
         if (currentImageIndex > last) {
             currentImageIndex = first;
         }
-           // position image randomly within container
-           let x = Math.floor(Math.random() * (container.clientWidth - image.clientWidth));
-           let y = Math.floor(Math.random() * (container.clientHeight - image.clientHeight));
-           image.style.left = x + 'px';
-           image.style.top = y + 'px';
+         
 
        }, interval);
    }
@@ -25,3 +21,4 @@ function updateImage(path, first, last, interval) {
 
 
 updateImage('callout-content/background/', 1, 18, 2000); // every 2 seconds
+

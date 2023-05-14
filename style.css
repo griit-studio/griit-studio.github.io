@@ -30,7 +30,31 @@ body{
     
 }
 
+#logo{
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: #983414;
+    
+    
 
+}
+#logo h2{
+    margin-top: 0;
+    font-size: large;
+    margin-bottom: 0;
+
+}
+#logo h3{
+    width: 100%;
+    text-align: justify;
+    text-justify:inter-charactor;
+    background-color: aquamarine;
+}
 
 #graphic-banner{
     position: relative;
@@ -54,6 +78,18 @@ h1{
     
 }
 
+#AOC{
+    margin-top: 300px;
+    width: 100%;
+    text-align:justify;
+    margin-left: auto;
+    margin-right: auto;
+    font-size:medium;
+}
+#arrow{
+    margin-top: 100px;
+    mix-blend-mode: multiply;
+}
 #callout-heading{
  
     display: flex;
@@ -63,11 +99,16 @@ h1{
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 0;
 
 }
-#callout-heading img{
-    width: 75%;
+.diagram{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     mix-blend-mode: multiply;
+    z-index: 5;
+    
 }
 #callout{
     margin-top: 30vh;
@@ -108,9 +149,10 @@ h1{
 
 .info{
     
+    margin-top: 85px;
     margin-left: auto;
     margin-right: auto;
-    text-align: justify;
+    
     
 }
 
@@ -128,7 +170,8 @@ h1{
     margin-top: 200px;
     margin-left: auto;
     margin-right: auto;
-    width: 65vw;
+    
+    width: 50vw;
    
 }
 

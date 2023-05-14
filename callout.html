@@ -6,36 +6,47 @@
   <title>Callout: WATER</title>
   <link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/interactjs@1.10.11/dist/interact.min.js"></script>
+
 
 </head>
 <body>
    
   <div id="container">
-    <h1> water </h1>
+    <!-- <h1>WATER</h1> -->
+
+    <div id = "logo">
+
+      <h3>00-01</h3>
+      <h2>WATER</h2>
+      <h3>[thirst]</h3>
+
+    </div>
 
     <img id="imageDiv" src="callout-content/Water000019.jpg" />
-    
-
   </div>
 
-   <div id = "callout-heading">
+ 
+  
+</div>
+  <div id = "callout-heading">
   <h1 id="callout"> PLATYPUS ESSENTIALS CALLOUT </h1>
   <h1 id = "water"> water </h1> 
   <h3 id ="thirst">[THIRST]</h3>
-  <img src = "callout-content\WHEN_.png">
+
+  <img id = "arrow" src = "callout-content/arrow.png">
+  
   </div>
     
     <div id = info>
+    
+    <img class="diagram" src="callout-content/WHAT_.png">
+    
     <div class = "info"> 
 
-        <h3>PLATYPUS ACKNOWLEDGES AND DEEPLY RESPECTS THE QUANDAMOOKA, JAGERA AND TURRBAL PEOPLE, THE TRADITIONAL OWNERS OF THE LAND, SEAS AND SKIES WHICH FACILITATES THE CREATION OF THIS PUBLICATION. PLATYPUS PAYS ITS RESPECTS TO THEIR ELDERS PAST AND PRESENT, AND THEIR DESCENDANTS. SOVEREIGNTY HAS NEVER BEEN CEDED.					
-          IT ALWAYS WAS AND ALWAYS WILL BE, ABORIGINAL LAND. 
-          </h3>
-      
-    </div>
-
-    
+      <h3 id = "AOC">PLATYPUS ACKNOWLEDGES AND DEEPLY RESPECTS THE QUANDAMOOKA, JAGERA AND TURRBAL PEOPLE, THE TRADITIONAL OWNERS OF THE LAND, SEAS AND SKIES WHICH FACILITATES THE CREATION OF THIS PUBLICATION. 
+        PLATYPUS PAYS ITS RESPECTS TO THEIR ELDERS PAST AND PRESENT, AND THEIR DESCENDANTS. SOVEREIGNTY HAS NEVER BEEN CEDED.					
+        IT ALWAYS WAS AND ALWAYS WILL BE, ABORIGINAL LAND. 
+        </h3>
     
     <div class = "info"> 
 
@@ -96,6 +107,8 @@
     </p>
 
 </div>
+
+<img class="diagram" src="callout-content/WHEN_.png">
 </div>
 
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUfAFXvuTTY9iCgu4ifKAkqGosu_26jk_qeH48zGrm861JTQ/viewform?usp=sf_link" target="_blank" id = "apply-cont">
@@ -104,146 +117,7 @@
 
 </body>
 
-<script>
 
-  const container = document.getElementById('container');
-  const images = document.getElementsByClassName('draggable-image');
-
-  window.onload = () => {
-    for (let i = 0; i < images.length; i++) {
-      const image = images[i];
-      resizeImageRandomly(image);
-      initializeDraggableImage(image);
-      makeResizable(image);
-    }
-  };
-
-  function resizeImageRandomly(image) {
-  let newSize;
-  const screenWidth = window.innerWidth;
-
-  if (screenWidth <= 768) { // Mobile devices
-    newSize = getRandomValue(15, 50); // Adjust these values for mobile devices as needed
-  } else { // Non-mobile devices
-    newSize = getRandomValue(3, 25);
-  }
-  
-  image.style.width = newSize + 'vw';
-}
-
-  function initializeDraggableImage(image) {
-    // Set initial random position
-    const containerWidth = container.clientWidth;
-    const containerHeight = container.clientHeight;
-    const imageWidth = image.clientWidth;
-    const imageHeight = image.clientHeight;
-    const xPosition = getRandomPosition(0, containerWidth - imageWidth);
-    const yPosition = getRandomPosition(0, containerHeight - imageHeight);
-
-    image.style.left = xPosition + 'px';
-    image.style.top = yPosition + 'px';
-
-    // Add event listeners for dragging
-    let active = false;
-    let xOffset = 0;
-    let yOffset = 0;
-
-    image.addEventListener('mousedown', dragStart, false);
-    image.addEventListener('touchstart', dragStart, false);
-
-    document.addEventListener('mousemove', drag, false);
-    document.addEventListener('touchmove', drag, false);
-
-    document.addEventListener('mouseup', dragEnd, false);
-    document.addEventListener('touchend', dragEnd, false);
-
-    function dragStart(event) {
-      active = true;
-      image.style.transform = 'scale(1.1)';
-
-      if (event.type === 'touchstart') {
-        xOffset = event.touches[0].clientX - parseInt(image.style.left);
-        yOffset = event.touches[0].clientY - parseInt(image.style.top);
-      } else {
-        xOffset = event.clientX - parseInt(image.style.left);
-        yOffset = event.clientY - parseInt(image.style.top);
-      }
-    }
-
-    function drag(event) {
-      if (active) {
-        event.preventDefault();
-        let clientX, clientY;
-
-        if (event.type === 'touchmove') {
-          clientX = event.touches[0].clientX;
-          clientY = event.touches[0].clientY;
-        } else {
-          clientX = event.clientX;
-          clientY = event.clientY;
-        }
-
-        let xPosition = clientX - xOffset;
-        let yPosition = clientY - yOffset;
-
-        if (xPosition < 0) {
-          xPosition = 0;
-        } else if (xPosition > containerWidth - imageWidth) {
-          xPosition = containerWidth - imageWidth;
-        }
-
-        if (yPosition < 0) {
-          yPosition = 0;
-        } else if (yPosition > containerHeight - imageHeight) {
-          yPosition = containerHeight - imageHeight;
-        }
-
-        image.style.left = xPosition + 'px';
-        image.style.top = yPosition + 'px';
-      }
-    }
-
-    function dragEnd() {
-      active = false;
-      image.style.transform = 'scale(1)';
-    }
-  } 
-  function makeResizable(image) {
-  interact(image).resizable({
-    edges: { left: true, right: true, bottom: true, top: true },
-    modifiers: [
-      interact.modifiers.restrictEdges({
-        outer: container,
-      }),
-      interact.modifiers.restrictSize({
-        min: { width: 10, height: 10 },
-      }),
-    ],
-    inertia: true,
-  })
-  .on('resizemove', function (event) {
-    let { x, y } = event.target.dataset;
-
-    Object.assign(event.target.style, {
-      width: `${event.rect.width}px`,
-      height: `${event.rect.height}px`,
-      transform: `translate(${event.deltaRect.left}px, ${event.deltaRect.top}px)`,
-    });
-
-    Object.assign(event.target.dataset, { x, y });
-  });
-}
-
- 
-
-  function getRandomPosition(min, max) {
-    return Math.random() * (max - min) + min;
-  }
-
-  function getRandomValue(min, max) {
-    return Math.random() * (max - min) + min;
-  }
-</script>
 
 
 </html>
