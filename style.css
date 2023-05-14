@@ -12,16 +12,15 @@ html{
     left: 0px;
     overflow-x: hidden;
     color:blanchedalmond;
-    background-color: darkred;
+    background-color: whitesmoke;
     
 }
-
 
 body{
     margin: 0;
     padding: 0;
     
-    background-image: url('callout-content/back.png');
+    background-image: none;
     
     background-position: center;
     background-repeat: no-repeat;
@@ -32,6 +31,7 @@ body{
 }
 
 .draggable-image {
+    z-index: 2;
     position: absolute;
     cursor: move;
     touch-action: none;
@@ -122,13 +122,30 @@ font-style: italic;}
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    
-    background-size: cover;
+     ;
+    background-image: url("callout-content/Water00019.jpg");
+    background-size:fill;
     background-position: center;
 }
-#container h1{
-    font-size: 7vw;
+
+#container::after {
+    content: "";
     z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background-color: #983414; /* Replace this with the color you want to overlay. */
+    mix-blend-mode: multiply;
+    opacity: 0.9
+    ;
+}
+
+    #container h1{
+        color: blue;
+    z-index: 3;
+    font-size: 7vw;
     font-style: italic;
     user-select: none;
 }
