@@ -105,7 +105,8 @@ h1{
        }
 
 
-.small-arrow img{width: 5%;}
+.small-arrow img{width: 5%;
+margin-top: -250px;}
       
      
 #callout-heading{
@@ -248,7 +249,7 @@ h1{
         width: 100%;
         background-color: aqua;
     }
-
+    .small-arrow{margin-top: -100px;}
     #AOC{
         margin-top: 50px;
         font-size: small;
