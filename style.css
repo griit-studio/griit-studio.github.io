@@ -11,7 +11,7 @@ html{
     width: 100vw;
     left: 0px;
     overflow-x: hidden;
-    color:blanchedalmond;
+    color:black;
     background-color: whitesmoke;
     
 }
@@ -30,13 +30,7 @@ body{
     
 }
 
-.draggable-image {
-    z-index: 2;
-    position: absolute;
-    cursor: move;
-    touch-action: none;
-    transition: transform 0.2s;
-  }
+
 
 #graphic-banner{
     position: relative;
@@ -48,27 +42,56 @@ body{
 
 }
 
+
+
 h1{
+
     width: 100%;
     text-align: center;
-    font-size: 6vw;
+    font-size: 2vw;
+    font-style: italic;
+    font-weight: 50;
     
 }
 
-#water{font-size: 10vw;
-color: blue;
-text-shadow: 7px 5px 3px darkblue;
-margin-bottom: -90px;
-font-style: italic;}
+#callout-heading{
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+#callout-heading img{
+    width: 75%;
+    mix-blend-mode: multiply;
+}
+#callout{
+    margin-top: 30vh;
+    margin-bottom: 0px;
+    
+}
+#water{
+    margin: 0px;
+    font-size: 8vw;
+    color: #983414;
+     font-style: italic;
+    font-weight: 50;}
 
 #thirst{
 
-    color: blanchedalmond;
+    color: black;
     width: 100%;
     text-align: center;
     font-size: 1vw;}
 
-#background-img{
+
+
+
+    #background-img{
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -106,13 +129,6 @@ font-style: italic;}
     column-gap: 20px;
 }
 
-.bouncing-image {
-    position: absolute;
-    width: 350px; /* Adjust width of the image */
-    z-index: -1;
-    opacity: 1;
-    
-  }
 
   #container {
     display: flex;
@@ -128,24 +144,18 @@ font-style: italic;}
     background-position: center;
 }
 
-#container::after {
-    content: "";
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20%;
-    height: 100%;
-    background-color: #983414; /* Replace this with the color you want to overlay. */
-    mix-blend-mode: multiply;
-    opacity: 0.9
-    ;
-}
 
+
+#imageDiv{
+    position: absolute;
+    min-width: 100%;
+    height: 100%;
+}
     #container h1{
-        color: blue;
+        color: #983414;
     z-index: 3;
-    font-size: 7vw;
+    font-size: 8vw;
+    font-weight: 50;
     font-style: italic;
     user-select: none;
 }
@@ -169,7 +179,6 @@ font-style: italic;}
         
     }
     #water{
-
         font-size: 25vw;
         margin-bottom: -40px;
     }
