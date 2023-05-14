@@ -5,6 +5,22 @@
     font-style: normal;
     
   }
+
+  #BCC{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #BCC p{
+    margin-top: 200px;
+    font-size: x-small;
+  }
+   #BCC img{
+    mix-blend-mode: multiply;
+    width: 250px;
+   }
 html{
     /*font-family: 'TeX Gyre Heros', sans-serif;*/
     font-family: 'Times New Roman', Times, serif;
@@ -226,7 +242,9 @@ margin-top: -250px;}
     }
     .info{
         width: 85vw;
-        font-size: small;}
+        font-size: small;
+    margin-bottom: 0;
+margin-top: 200px;}
     h1{ 
         font-size: 8vw;
         
@@ -249,9 +267,9 @@ margin-top: -250px;}
         width: 100%;
         background-color: aqua;
     }
-    .small-arrow{margin-top: -100px;}
+    .small-arrow{margin-top: 0x;}
     #AOC{
-        margin-top: 50px;
+        margin-top: -175px;
         font-size: small;
         margin-left: auto;
         margin-right: auto;
