@@ -20,5 +20,5 @@ function updateImage(path, first, last, interval) {
 
 
 
-updateImage('callout-content/background/', 1, 18, 2000); // every 2 seconds
+updateImage('callout-content/background/', 1, 18, 200); // every 2 seconds
 
